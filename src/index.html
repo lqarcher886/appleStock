@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>FountainJS</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- jQuery+ bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <!-- highcharts -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+
+
+    <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
+  </head>
+
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <h1> Today's stock price for Apple :</h1> <br>
+
+      <div id="table">
+          <table class="table table-bordered">
+              <tr>
+                  <td><label>Date</label></td>
+                  <td><label>Stock Price</label></td>
+              </tr>
+              <tr ng-repeat="x in test1 ">
+                  <td>{{x.Date}}</td>
+                  <td>{{x.Adj_Close}}</td>
+              </tr>
+          </table>
+      </div>
+
+      <div id="container" class="graphs"></div>
+
+
+
+
+  </body>
+</html>

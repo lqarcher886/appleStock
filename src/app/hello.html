@@ -1,0 +1,20 @@
+
+
+
+<h1> Today's stock price for Apple :</h1> <br>
+
+<div id="table">
+    <table class="table table-bordered">
+        <tr>
+            <td><label>Date</label></td>
+            <td><label>Stock Price</label></td>
+        </tr>
+        <tr ng-repeat="x in test1 ">
+            <td>{{x.Date}}</td>
+            <td>{{x.Adj_Close}}</td>
+        </tr>
+    </table>
+</div>
+
+<div id="container" class="graphs"></div>
+
