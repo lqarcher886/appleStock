@@ -18,14 +18,23 @@
 
 
 
+    <!-- angular-gridster -->
+
+    <link rel="stylesheet" href="bower_components/angular-gridster/dist/angular-gridster.min.css"/>
+    <script src="bower_components/javascript-detect-element-resize/jquery.resize.js"></script>
+    <script src="bower_components/angular-gridster/dist/angular-gridster.min.js"></script>
+
+
+
+
 
     <link rel="icon" type="image/png" href="http://fountainjs.io/assets/imgs/fountain.png" />
   </head>
 
   <body ng-app="myApp" ng-controller="myCtrl">
-    <h1> Today's stock price for Apple :</h1> <br>
 
-      <div id="table">
+
+ <!--      <div id="table">
           <table class="table table-bordered">
               <tr>
                   <td><label>Date</label></td>
@@ -37,11 +46,53 @@
               </tr>
           </table>
       </div>
+ -->
+      
+
+
+<!--       <div gridster="gridsterOpts">
+          <ul>
+              <li gridster-item="item" ng-repeat="item in test1">
+                  {{ gridsterItem.isMoving() }}
+              </li>
+          </ul>
+      </div> -->
+
+      <h1> Stock Price For Apple :</h1> <br>
+
+      <div gridster="gridsterOpts" id="table">
+        <table class="table table-bordered">
+              <tr>
+                  <td><label>Date</label></td>
+                  <td><label>Stock Price</label></td>
+              </tr>
+              <tr gridster-item="item" ng-repeat="item in test1">
+                  <td>{{item.Date}}</td>
+                  <td>{{item.Adj_Close}}</td>
+              </tr>
+          </table>
+
+      </div>
 
       <div id="container" class="graphs"></div>
 
 
 
-
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
